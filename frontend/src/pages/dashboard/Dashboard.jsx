@@ -45,7 +45,7 @@ export default function Dashboard() {
     e.target.reset();
   
     // Then make the API call
-    axios.post('http://localhost:5000/api/', {
+    axios.post('https://pookieai.onrender.com/api/', {
       question: promptInput
     })
       .then(function (response) {
