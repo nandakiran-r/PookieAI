@@ -16,7 +16,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-const port = 5000;
+const port = 80;
 app.listen(port, () => {
   console.log('server started')
 })
