@@ -1,0 +1,126 @@
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 5vw;
+    font-weight: 400;
+    font-family: "Jersey 20", sans-serif;
+}
+
+.prompt-box {
+    margin-top: auto;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.chatbox-title {
+    animation: blink 1.5s infinite;
+    /* Blinks every 1 second */
+    transition: opacity 1s ease-out;
+    /* Smooth fade-out when removed */
+}
+
+.chatbox-title.fade-out {
+    opacity: 0;
+    pointer-events: none;
+    /* Makes it non-interactive */
+}
+
+
+.blinking {
+    animation: blink 1s infinite;
+}
+
+.chat-prompt-box {
+    margin-top: 1rem;
+    padding: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.chat-history {
+    max-height: 500px;
+    overflow-y: auto;
+    margin-bottom: 0.75rem;
+    padding-right: 1rem;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    background-color: #f7f9fc;
+    padding: 0.5rem;
+    min-width: 320px;
+}
+
+.chat-message {
+    background-color: #EEE;
+    padding: 1rem;
+    margin-bottom: 0.4rem;
+    border-radius: 8px;
+    font-size: 30px; /* Smaller text */
+    color: #333;
+    text-align: left;
+    line-height: 120%;
+}
+
+.chat-placeholder {
+    color: #333;
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
+}
+
+.prompt-form {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.prompt-input {
+    flex: 1;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 0.95rem;
+    background-color: #f8fafc;
+    transition: border-color 0.2s ease;
+    color: #333;
+}
+
+.prompt-input:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.prompt-submit {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prompt-submit:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 91, 187, 0.2);
+}
+
+.prompt-submit:active {
+    background-color: #004080;
+}
