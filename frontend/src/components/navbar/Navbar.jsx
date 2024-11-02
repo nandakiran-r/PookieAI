@@ -2,14 +2,30 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import auraImage from "../../assets/aura.png";
 import Swal from "sweetalert2";
 
 export default function Navbar() {
 
-    function pranked() {
+    function pookified() {
         Swal.fire({
-            html: " <h4> <b> You Got Pranked </b> </h4>",
+            html: " <h4> <b> You Got Pookified </b> </h4>",
             icon: "question",
+            showConfirmButton: false
+        });
+    }
+
+    function pookifiedAgain() {
+        Swal.fire({
+            html: `<h4> <b> You Got Pookified Again </b> </h4>`,
+            icon: "question",
+            showConfirmButton: false
+        });
+    }
+
+    function aura() {
+        Swal.fire({
+            html: `<img src="${auraImage}" loading="lazy" width="400px" alt="aura"/> <br/>  <br/> <h4> <b> You achieved 100 Aura! </b> </h4>`,
             showConfirmButton: false
         });
     }
@@ -36,19 +52,19 @@ export default function Navbar() {
             <div className="navbar-contents">
                 <nav role="navigation" className="nav-menu w-nav-menu">
                     <Link
-                        onClick={pranked}
+                        onClick={pookified}
                         className="nav-link"
                     >
                         About
                     </Link>
                     <Link
-                        onClick={pranked}
+                        onClick={pookifiedAgain}
                         className="nav-link"
                     >
                         Pricing
                     </Link>
                     <Link
-                        onClick={pranked}
+                        onClick={aura}
                         className="nav-link"
                     >
                         Pookify Me
